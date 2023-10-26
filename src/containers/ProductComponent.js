@@ -6,14 +6,23 @@ const ProductComponent = ()=>{
     const products = useSelector((state)=>state.allProducts.products)
     const renderList = products.map((product)=>{
         const{title,id,price,image,category}= product
+
+        const sameSize={
+            height:"300px",
+            width:"250px"
+
+        }
+        const desc= {
+            height:""
+        }
         return (
-            <div className="four wide column" key={id}>
+            <div className="four wide column" key={id} style={{marginTop:"100px"}}>
                 <Link to={`/products/${id}`}>
                
-            <div className="ui link cards">
+            <div className="ui link card">
                 <div className="card">
-                    <div className="image"> 
-                        <img src={image} alt={title}/>
+                    <div className="image" > 
+                        <img src={image} alt={title} style={sameSize}/>
                     </div>
                     <div className="content">
                             <div className="header">{title}</div>
