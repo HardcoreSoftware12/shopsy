@@ -9,6 +9,7 @@ export const setProducts = (products)=>{
 }
 
 export const selectedProduct = (product)=>{
+    console.log(product);
     return{
         type:ActionTypes.SELECTED_PRODUCT,
         payload:product

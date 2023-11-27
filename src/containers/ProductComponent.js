@@ -7,25 +7,20 @@ const ProductComponent = ()=>{
     const renderList = products.map((product)=>{
         const{title,id,price,image,category}= product
 
-        const sameSize={
-            height:"300px",
-            width:"250px"
-
-        }
-        const desc= {
-            height:""
-        }
+       
+        
         return (
-            <div className="four wide column" key={id} style={{marginTop:"100px"}}>
+            <div className="four wide column ranjit" key={id} style={{marginTop:"100px"}}>
                 <Link to={`/products/${id}`}>
                
             <div className="ui link card">
                 <div className="card">
                     <div className="image" > 
-                        <img src={image} alt={title} style={sameSize}/>
+                        <img src={image} alt={title} style={{backgroundColor:"grey", height:"300px",
+            width:"250px",alignContent:"center"}}/>
                     </div>
-                    <div className="content">
-                            <div className="header">{title}</div>
+                    <div className="content" style={{textAlign:"center"}}>
+                            <div className="header" >{title}</div>
                             <div className="meta price">$ {price}</div>
                             
                             <div className="meta">{category}</div>

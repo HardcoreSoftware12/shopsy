@@ -8,8 +8,10 @@ const ProductDetail = ()=>{
     const product  = useSelector((state)=>state.product)
     const {title,id,price,category,image,description} = product
     const {productId} = useParams()
-    console.log(product);
+    // console.log(product);
     const dispatch = useDispatch();
+    const winWidth = window.innerWidth;
+    console.log(winWidth);
 
     const fetchProductDetail = async () =>{
         const response = await axios.get(`https://fakestoreapi.com/products/${productId}`).catch((err)=>{
@@ -40,7 +42,7 @@ const ProductDetail = ()=>{
             ) : (
                 <div className="ui placeholder segment" style={{marginTop:"100px"}}>
                     <div className="ui two column stackable center aligned grid">
-                        <div className="ui vertical divider">AND</div>
+                        <div className="ui vertical divider and">AND</div>
                         <div className="middle alligned row " >
                             <div className="column lp" >
                                 <img className="ui fluid image"  src={image} alt="" style={style}/>

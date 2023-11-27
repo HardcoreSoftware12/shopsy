@@ -6,6 +6,7 @@ import ProductComponent from "./ProductComponent";
 
 const ProductListing = ()=>{
     const products = useSelector((state)=>state.allProducts.product)
+    console.log(products);
     const dispatch = useDispatch()
 
     const fetchProducts = async()=>{
@@ -23,7 +24,7 @@ const ProductListing = ()=>{
     
     
     return(
-        <div className="ui grid container" >
+        <div className="ui stackable mobile equal width grid container ranjit">
             
            
             <ProductComponent/>
